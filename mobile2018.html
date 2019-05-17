@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=big5">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>TESOL Chile</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/admin/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/admin/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/admin/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/admin/img/favicon.png">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+		 html, body {color: #000; background-color: #000; overflow: hidden;}
+        .fullContainer {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            z-index: 1;
+			overflow: hidden;
+			background: transparent url(/admin/img/mobile_bg.png) bottom left / 300px 300px no-repeat;
+            background-position: -77px 67vh;
+        }
+        .fullContainer > p {
+            font-size: 1.2em;
+        }
+        .fullContainer > .centeredDiv {
+            margin: 10px auto;
+            width: min-content;
+        }
+        .fullContainer strong {
+            font-size: 1.5em;
+        }
+        .bordered {
+            border: 1px solid #FFF;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .indicators {
+            position: fixed;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            padding: 10px 5px;
+        }
+        .indicators > .item {
+            flex: 1;
+            height: 5px;
+            background-color: #FFFFFF99;
+            margin: 5px;
+            border-radius: 2px;
+        }
+        .indicators > .active {
+            background-color: #FFFFFF;
+        }
+		a[href^=tel] {
+			text-decoration:inherit;
+			color: inherit;
+		}
+    </style>
+    <script>
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            location.href='conference2018.html';
+        }
+        $(function() {
+            $(document).on('swiperight', '.fullContainerLast', function(e){
+                $(this).fadeOut(300).prev().fadeIn(500);
+                $('.indicators').find('.active').removeClass('active').prev().addClass('active');
+            });
+            $(document).on('swipeleft', '.fullContainerLast', function(e){
+                $(this).fadeOut(300);
+                $('.fullContainer').first().fadeIn(500);
+                $('.indicators').find('.active').removeClass('active');
+                $('.item').first().addClass('active');
+            });
+            $(document).on('swiperight', '.fullContainerOther', function(e){
+                $(this).fadeOut(300).prev().fadeIn(500);
+                $('.indicators').find('.active').removeClass('active').prev().addClass('active');
+            });
+            $(document).on('swipeleft', '.fullContainerOther', function(e){
+                $(this).fadeOut(300).next().fadeIn(500);
+                $('.indicators').find('.active').removeClass('active').next().addClass('active');
+            });
+            $(document).on('swiperight', '.fullContainerFirst', function(e){
+                $(this).fadeOut(300);
+                $('.fullContainer').last().fadeIn(500);
+                $('.indicators').find('.active').removeClass('active');
+                $('.item').last().addClass('active');
+            });
+            $(document).on('swipeleft', '.fullContainerFirst', function(e){
+                $(this).fadeOut(300).next().fadeIn(500);
+                $('.indicators').find('.active').removeClass('active').next().addClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="indicators">
+        <div class="item active"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="fullContainer fullContainerFirst blue">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Program</h4>
+        <div class="centeredDiv" onclick="location.href='/admin/files/program_final.pdf'">
+            <i class="material-icons white-text" style="font-size: 20em;">developer_board</i>
+            <p class="white-text center">View Program</p>
+            <p class="white-text center">November 16th & 17th, 2018</p>
+        </div>
+    </div>
+    <div class="fullContainer fullContainerOther cyan" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Program</h4>
+        <div class="centeredDiv" onclick="location.href='/admin/files/laalta_programme_2018_final.pdf'">
+            <i class="material-icons white-text" style="font-size: 20em;">developer_board</i>
+            <p class="white-text center">View Full Detailed Program</p>
+            <p class="white-text center">November 16th & 17th, 2018</p>
+        </div>
+    </div>
+    <div class="fullContainer fullContainerOther deep-purple" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Keynote Speakers</h4>
+        <p class="white-text center"><b>Katharina Glas</b>, Pontifica Universidad Cat&oacute;lica de Valpara&iacute;so<br /><small>November 16th<br />Room Aula Media (16:30 - 17:30)</small><br /><i>Towards autonomy support in the Chilean ELT classroom - Removing the obstacles</i></p><hr>
+        <p class="white-text center"><b>Claudia Harsch</b>, University of Bremen<br /><small>November 17th<br />Room Aula Media (8:30 - 10:30)</small><br /><i>The importance of building local networks for professional development</i></p><hr>
+        <p class="white-text center"><b>Nicole Hansen</b>, Chilean Ministry of Education<br /><small>November 17th<br />Room Aula Media (16:30 - 17:30)</small><br /><i>Public speaking and debate as a methodology to increase critical thinking and communication skills in a foreing language</i></p>
+    </div>
+    <div class="fullContainer fullContainerOther indigo" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Venue</h4>
+        <p class="white-text center">When: November 16th & 17th, 2018</p>
+        <p class="white-text center">Where: Pontificia Universidad Cat&oacute;lica de Valpara&iacute;so, Campus Sausalito</p>
+        <div class="centeredDiv" onclick="location.href='https://goo.gl/maps/D7BMzKdeuAy'">
+            <i class="material-icons white-text" style="font-size: 20em;">map</i>
+            <p class="white-text center">View Map</p>
+        </div>
+    </div>
+    <div class="fullContainer fullContainerOther light-green" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Prices</h4>
+        <p class="white-text center">EARLY BIRD REGISTRATION <br />by November 10th <br /><strong>25.000 CLP</strong></p><hr>
+        <p class="white-text center">GENERAL REGISTRATION <br /><strong>35.000 CLP</strong></p><hr>
+        <p class="white-text center">UNDERGRADUATE STUDENT REGISTRATION <br /><strong>10.000 CLP</strong></p><hr>
+        <p class="white-text center">PRESENTER REGISTRATION <br /><strong>20.000 CLP</strong></p>
+    </div>
+    <div class="fullContainer fullContainerOther teal" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Accomodation</h4>
+        <p class="white-text center">Vi&ntilde;a del Mar is a city of great tourist interest, with a great offer in gastronomy and shopping. It is a few minutes away by car or public transportation from Valpara&iacute;so, which is the capital of the fifth region of Chile, world-famous for being cosmopolitan, for having one of the most important ports in South America, and for being recognized as World Heritage</p>
+        <div onclick="location.href='http://www.ha.cl'" class="white-text center bordered">Ankara Hotel<br /><small>7-minutes drive without traffic, 26-minute walk from Sausalito Campus</small></div>
+        <div onclick="location.href='https://www.monterilla.cl/index/'" class="white-text center bordered">Monterilla Hotel<br /><small>7-minutes drive without traffic, 30-minute walk from Sausalito Campus</small></div>
+        <div onclick="location.href='http://www.panamericanahoteles.cl'" class="white-text center bordered">Western Marina del Rey Hotel<br /><small>10-minutes drive without traffic, 39-minute walk from Sausalito Campus</small></div>
+        <div onclick="location.href='https://www.booking.com/hotel/cl/panamericana-o-higgins-vina-del-mar.es.html?aid=318615;label=English_Chile_EN_CL_29562109345-YbsS%2AxfBUpemzIFX6Kg9EwS113417609665%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi2647230075%3Atidsa-325338878772%3Alp1003325%3Ali%3Adec%3Adm;sid=0dfd542f527518a7668b2523275fce9d;dest_id=-904540;dest_type=city;dist=0;hapos=1;hpos=1;room1=A%2CA;sb_price_type=total;srepoch=1540046936;srfid=73202808566c2e477d02b4dc7009b552489f7517X1;srpvid=b705682b40c900f1;type=total;ucfs=1&#hotelTmpl'" class="white-text center bordered">O'Higgins Hotel<br /><small>8-minutes drive without traffic, 27-minute walk from Sausalito Campus</small></div>
+    </div>
+    <div class="fullContainer fullContainerOther red" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Transportation</h4>
+        <p class="white-text center">How to get to Vi&ntilde;a del Mar from the Arturo Merino Ben&iacute;tez Airport (SCL)</p>
+        <p class="white-text center"><b>Option 1</b><br />There are two bus lines that leave every 15 minutes from the airport; fare is USD$3 and they transfer passengers from the airport to Pajaritos subway station, where there are buses to Vi&ntilde;a del Mar (approximately 90 minutes).</p>
+        <p class="white-text center"><b>Option 2</b><br />There is a transfer car service that can take at least two passengers to Vi&ntilde;a del Mar. This car takes route 68 that leads to either Valpara&iacute;so or Vi&ntilde;a del Mar. A taxi will cost somewhere in the region of USD$140 from the airport to Vi&ntilde;a del Mar.</p>
+    </div>
+    <div class="fullContainer fullContainerOther orange darken-2" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Transportation</h4>
+        <p class="white-text center">How to get to the Mar&iacute;a Teresa Brown de Arist&iacute;a (Sausalito) Campus<br />The Sausalito Campus is located on Avenida El Bosque #1290 (1290 El Bosque Avenue).</p>
+        <p class="white-text center"><b>Taxi</b><br />Around the city, there are different radio taxi services.<br />They can also be found at the Vi&ntilde;a del Mar Bus Terminal (Avenida Valpara&iacute;so 1055)<br />Phone: <b class="white-test">+56 32 2752080</b></p><hr><p class="white-text center">Radio Taxis "Nuevo F&eacute;nix"<br />Service is available 24/7<br />Phone: <b class="white-test">+56 32 2680784</b></p><hr><p class="white-text center">Radio Taxis "Abacars"<br />Phone 1: <b class="white-test">+56 32 2626021</b><br />Phone 2: <b class="white-test">+56 9 92909783</b></p>
+    </div>
+    <div class="fullContainer fullContainerOther yellow darken-3" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Transportation</h4>
+        <p class="white-text center">How to get to the Mar&iacute;a Teresa Brown de Arist&iacute;a (Sausalito) Campus<br />The Sausalito Campus is located on Avenida El Bosque #1290 (1290 El Bosque Avenue).</p>
+        <p class="white-text center"><b>Colectivos</b><br />"Colectivos" are like taxis but they have fixed routes.<br />Colectivo numbers <b>33</b>, <b>31</b>, <b>119</b>, <b>128</b> and <b>131</b> go up to the campus and can be taken in downtown Vi&ntilde;a del Mar, specifically <b>on Calle 5 Oriente or on Alvarez Street</b>.</p>
+    </div>
+    <div class="fullContainer fullContainerOther lime darken-4" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Transportation</h4>
+        <p class="white-text center">How to get to the Mar&iacute;a Teresa Brown de Arist&iacute;a (Sausalito) Campus<br />The Sausalito Campus is located on Avenida El Bosque #1290 (1290 El Bosque Avenue).</p>
+        <p class="white-text center"><b>City Bus</b><br />Numbers <b>401</b>, <b>402</b>, <b>403</b>, <b>406</b>, <b>407</b>, <b>410</b>, <b>212</b>, <b>213</b> and <b>214</b>, can be taken <b>on Alvarez Street</b> and <b>on 5 Oriente Street</b>.<br />Passengers must <b>get off</b> on the <b>corner of 5 Oriente and 12 Norte Street</b>.<br />To get to the Campus, <b>walk along 12 Norte Street</b> until you reach <b>6 Oriente Street</b> (on the corner there is a gas point of sale, LIPIGAS).<br>Then, <b>cross the street</b> and, <b>turning on the first right</b>, start climbing <b>Los Lirios Street</b>.<br /><b>Avenida El Bosque</b> is found by getting to the <b>end of Los Lirios Street</b> to the left.<br />A few steps away from there is the <b>Sausalito Campus</b>.</p>
+    </div>
+    <div class="fullContainer fullContainerLast brown" style="display:none;">
+        <h3 class="white-text center">Conference 2018</h3>
+        <h4 class="white-text center">Transportation</h4>
+        <p class="white-text center">How to get from Valpara&iacute;so to Vi&ntilde;a del Mar</p>
+        <p class="white-text center"><b>Train</b><br />Trains run every 15 minutes from Valpara&iacute;so to Vi&ntilde;a del Mar.</p>
+        <p class="white-text center"><b>City Bus</b><br />There are many Valpara&iacute;so-to-Vi&ntilde;a del Mar bus lines; for example, numbers <b>212</b>, <b>213</b>, <b>214</b>, <b>215</b>, <b>216</b>, <b>603</b>, <b>602</b>, <b>606</b> and <b>610</b>.</p>
+        <p class="white-text center"><b>Colectivos</b><br />They circulate around Valpara&iacute;so, the ones that go to Vi&ntilde;a del Mar are numbers <b>86</b>, <b>90</b>, <b>35</b>, <b>188</b>, <b>142</b>, <b>153</b> and <b>220</b>.</p>
+    </div>
+</body>
+</html>
